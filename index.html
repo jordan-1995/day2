@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body id="body">
+
+  <nav class="navbar fixed-top navbar-expand-md navbar-light bg-faded">
+    <div class="container">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="">
+      </div>
+      <div class="toggle">
+        <img id="toggle-logo" onclick="toggleLogo()" src="/images/icon-hamburger.svg" alt="">
+      </div>
+    </div>
+    <div id="nav-list">
+      <ul>
+        <li class="link-item">
+          <div class="navlist-subsection"><div class="main-list">Product<div><img src="/images/icon-arrow-dark.svg" onclick="subClick()" id="arrow" style="margin-left: 5px;" alt=""></div></div>
+            <div class="sub-dropdown">
+              <div class="product-dropdown">Overview</div>
+              <div class="product-dropdown">Pricing</div>
+              <div class="product-dropdown">Marketplace</div>
+              <div class="product-dropdown">Features</div>
+              <div class="product-dropdown">Integrations</div>
+            </div>
+          </div>
+        </li>
+
+        <li class="link-item">
+          <div class="navlist-subsection"><div class="main-list">Company<div><img src="/images/icon-arrow-dark.svg" onclick="subClick()" id="arrow" style="margin-left: 5px;" alt=""></div></div>
+            <div class="sub-dropdown">
+              <div class="product-dropdown">About</div>
+              <div class="product-dropdown">Team</div>
+              <div class="product-dropdown">Blog</div>
+              <div class="product-dropdown">Careers</div>
+            </div>
+          </div>
+        </li>
+          
+        <li class="link-item">
+          <div class="navlist-subsection"><div class="main-list">Connect<div><img src="/images/icon-arrow-dark.svg" onclick="subClick()" id="arrow" style="margin-left: 5px;" alt=""></div></div>
+            <div class="sub-dropdown">
+              <div class="product-dropdown">Contact</div>
+              <div class="product-dropdown">Newsletter</div>
+              <div class="product-dropdown">LinkedIn</div>
+            </div>
+          </div>
+        </li>
+
+        <li class="link-item">Login</li>
+        <li class="link-item"><button>Sign Up</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="section1">
+    <div class="sect1-heading"><p>A modern</p>  
+     <p>publishing platform</p> </div>
+    <div class="sect1-mid">Grow your audience and build your online brand</div>
+    <div class="sect1-bottom"><button class="sect1-button1">Start for Free</button><button class="sect1-button2">Learn More</button> </div>
+  </div>
+
+  <div class="section2">
+    <div class="sect2-p1">
+      <h2>Designed for the future</h2>
+      <div class="sect2-p1-image"></div>
+    </div>
+    <div class="sect2-p2">
+      <div class="sect2-p2-p1">
+        <h2>Introducing an extensible editor</h2>
+        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+        The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+        videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+        change the looks of a blog.</p>
+      </div>
+      <div class="sect2-p2-p2">
+        <h2>Robust content management</h2>
+        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
+        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section3">
+    <div class="sect3-p1"><img src="/images/illustration-phones.svg" alt=""></div>
+    <div class="sect3-p2">
+      <div class="sect3-p2-inner">
+        <h2>State of the Art Infrastructure</h2>
+        <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section4">
+    <div class="sect4-p1">
+      <div class="sect4-p1-p1">
+        <h2>Free, open, simple</h2>
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+      </div>
+      <div class="sect4-p1-p2">
+        <h2>Powerful tooling</h2>
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+        capable of producing even the most complicated sites.</p>
+      </div>
+    </div>
+    <div class="sect4-p2">
+      <div class="sect4-p2-image"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-logo"><img src="/images/logo.svg" alt=""></div>
+    <div class="footer-sect2">
+      Product
+      <ul class="foot-sect2-subsect">
+        <li>Overview</li>
+        <li>Pricing</li>
+        <li>Marketplace</li>
+        <li>Features</li>
+        <li>Integrations</li>
+      </ul>
+    </div>
+    <div class="footer-sect3">
+      Company
+      <ul class="foot-sect3-subsect">
+        <li>About</li>
+        <li>Team</li>
+        <li>Blog</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+    <div class="footer-sect4">
+      Connect
+      <ul class="foot-sect4-subsect">
+        <li>Contact</li>
+        <li>Newsletter</li>
+        <li>LinkedIn</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
